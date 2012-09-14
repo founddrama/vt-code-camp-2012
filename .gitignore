@@ -1,0 +1,3 @@
+# JUnit XML reports:
+target/test-reports/
+TEST-*.xml
