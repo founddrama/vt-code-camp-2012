@@ -3,7 +3,7 @@
 vtcc.math = (function(){
 
   function _prepMathArgs(){
-    var args = vtcc.util.flatten(arguments),
+    var args = vtcc.util.flatten.apply(this, arguments),
         sanitizedArgs = [];
 
     for (var i = 0; i < args.length; i++) {
@@ -16,11 +16,11 @@ vtcc.math = (function(){
   }
 
   function max(){
-    return Math.max.apply(Math, _prepMathArgs(arguments));
+    return Math.max.apply(Math, _prepMathArgs.apply(this, arguments));
   }
 
   function min(){
-    return Math.min.apply(Math, _prepMathArgs(arguments));
+    return Math.min.apply(Math, _prepMathArgs.apply(this, arguments));
   }
 
   return {

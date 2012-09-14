@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>All the Jasmine Tests | VT Code Camp 2012</title>
+  <link rel="stylesheet" type="text/css" href="../lib/jasmine/lib/jasmine-core/jasmine.css">
+</head>
+<body>
+
+  <script type="text/javascript" src="../lib/jasmine/lib/jasmine-core/jasmine.js"></script>
+  <script type="text/javascript" src="../lib/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+
+  <script type="text/javascript" src="../src/js/util.js"></script>
+  <script type="text/javascript" src="../src/js/math.js"></script>
+
+  <script type="text/javascript" src="js/util-spec.js"></script>
+  <script type="text/javascript" src="js/math-spec.js"></script>
+
+  <script type="text/javascript">
+    jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
+    jasmine.getEnv().execute();
+  </script>
+
+</body>
+</html>
