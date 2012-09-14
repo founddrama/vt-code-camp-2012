@@ -20,7 +20,7 @@
   <script type="text/javascript">
     if (/PhantomJS/.test(navigator.userAgent)) {
       jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
-      jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter());
+      jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter('target/test-reports/'));
       jasmine.getEnv().addReporter(new jasmine.ConsoleReporter());
     } else {
       jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
