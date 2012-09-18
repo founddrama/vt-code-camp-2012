@@ -1,4 +1,4 @@
-/*global vtcc*/
+/*global vtcc:true*/
 
 vtcc.math = (function(){
 
