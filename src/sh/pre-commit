@@ -1,0 +1,23 @@
+#!/bin/sh
+# A crude example pre-commit hook for git to execute your tests in PhantomJS.
+# @see https://github.com/jshint/jshint/
+
+TOTAL_FAILED=0
+
+# test every spec, every time:
+for FILE in `ls -1 test/* | egrep *-spec.htm`; do
+  phantomjs lib/jasmine-reporters/test/phantomjs-testrunner.js $(pwd)/${FILE}
+
+  if [[ $? > 0 ]]; then
+    TOTAL_FAILED = TOTAL_FAILED + 1
+  fi
+done
+
+if [[ ${EXIT_CODE} -ne 0 ]]; then
+    echo ""
+    echo "${TOTAL_FAILED} of your JavaScript tests failed."
+    echo "Commit aborted."
+    exit 1
+fi
+
+exit 0
