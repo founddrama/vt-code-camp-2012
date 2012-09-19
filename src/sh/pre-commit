@@ -9,11 +9,11 @@ for FILE in `ls -1 test/* | egrep *-spec.htm`; do
   phantomjs lib/jasmine-reporters/test/phantomjs-testrunner.js $(pwd)/${FILE}
 
   if [[ $? > 0 ]]; then
-    TOTAL_FAILED = TOTAL_FAILED + 1
+    TOTAL_FAILED=$((TOTAL_FAILED + 1))
   fi
 done
 
-if [[ ${EXIT_CODE} -ne 0 ]]; then
+if [[ ${TOTAL_FAILED} > 0 ]]; then
     echo ""
     echo "${TOTAL_FAILED} of your JavaScript tests failed."
     echo "Commit aborted."
