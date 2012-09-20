@@ -3,7 +3,7 @@
 vtcc.math = (function(){
 
   function _prepMathArgs(){
-    var args = vtcc.util.flatten.apply(this, arguments),
+    var args = vtcc.util.flatten(arguments),
         sanitizedArgs = [];
 
     for (var i = 0; i < args.length; i++) {

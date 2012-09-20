@@ -14,7 +14,7 @@ vtcc.util = (function(){
     while (args.length) {
       current = args.shift();
       if (isArray(current)) {
-        current = flatten.apply(this, current);
+        current = flatten(current);
       }
       flattenedArgs = flattenedArgs.concat(current);
     }
