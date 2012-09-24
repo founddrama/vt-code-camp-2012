@@ -32,6 +32,7 @@ a talk that was given at the 2012 [VT Code Camp](http://vtcodecamp.org/).
 
 * [Slides from the talk](http://www.slideshare.net/founddrama/like-a-genie-from-a-lamp-headless-javascript-unit-testing-with-jasmine-and-phantomjs)
   * also: [rate me on SpeakerRate](http://speakerrate.com/talks/16421-like-a-genie-from-the-lamp-headless-javascript-testing-with-jasmine-and-phantomjs)
+* blog post redux at blog.founddrama.net: [headless JavaScript unit testing with Jasmine and PhantomJS](http://blog.founddrama.net/2012/09/headless-javascript-testing-with-jasmine-and-phantomjs/)
 * [Jasmine](http://pivotal.github.com/jasmine/)
   * Rebecca Murphey's [jQuery Testing with Jasmine (screencast)](http://vimeo.com/20457625)
 * [PhantomJS](http://phantomjs.org/)
